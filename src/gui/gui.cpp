@@ -1,9 +1,12 @@
 #include "gui.h"
-#include <iostream>
+#include "MainWindow.h"
+#include <QApplication>
 
 int guiMain(int argc, char** argv)
 {
-	std::cout << "Hello world" << std::endl;
-	return 0;
+	QApplication app(argc, argv);
+	MainWindow w;
+	w.show();
+	return app.exec();
 }
 
