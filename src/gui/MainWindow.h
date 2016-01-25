@@ -9,5 +9,17 @@ class MainWindow : public QMainWindow
 public:
 	MainWindow(QWidget* parent = 0);
 	~MainWindow();
+private:
+	void initialize();
+	void createStatusbar();
+	void createToolbar();
+	void createMenus();
+	void createFileMenu();
+	void createHelpMenu();
+	void createExitAction(QMenu*);
+	void addAboutAction(QMenu*);
+private slots:
+	void onExit();
+	void onAbout();
 };
 #endif//__MAINWINDOW__H

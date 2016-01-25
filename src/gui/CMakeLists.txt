@@ -2,9 +2,13 @@ find_package(Qt4 REQUIRED)
 include(${QT_USE_FILE})
 set(moc_headers 
 	MainWindow.h
+	MainWidget.h
+	AboutDialog.h
 	)
 set(sources gui.cpp
 	MainWindow.cpp
+	MainWidget.cpp
+	AboutDialog.cpp
 	)
 set(headers 
 	gui.h 
