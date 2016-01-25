@@ -52,8 +52,6 @@ void MainWindow::addAboutAction(QMenu* menu)
 void MainWindow::onAbout()
 {
 	SHOW_DIALOG(AboutDialog)
-	//AboutDialog dlg(this);
-	//dlg.exec();
 }
 
 void MainWindow::createFileMenu()
