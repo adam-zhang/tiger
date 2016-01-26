@@ -2,7 +2,6 @@ find_package(Qt4 REQUIRED)
 include(${QT_USE_FILE})
 set(moc_headers 
 	MainWindow.h
-	MainWidget.h
 	AboutDialog.h
 	AccountTreeView.h
 	ContentWidget.h
@@ -10,7 +9,6 @@ set(moc_headers
 	)
 set(sources gui.cpp
 	MainWindow.cpp
-	MainWidget.cpp
 	AboutDialog.cpp
 	AccountTreeView.cpp
 	ContentWidget.cpp
