@@ -8,6 +8,7 @@
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
 {
+	setGeometry(100, 100, 800, 600);
 	setCentralWidget(new MainWidget);
 	initialize();
 }

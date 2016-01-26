@@ -6,6 +6,7 @@ set(moc_headers
 	AboutDialog.h
 	AccountTreeView.h
 	ContentWidget.h
+	MailListView.h
 	)
 set(sources gui.cpp
 	MainWindow.cpp
@@ -13,6 +14,7 @@ set(sources gui.cpp
 	AboutDialog.cpp
 	AccountTreeView.cpp
 	ContentWidget.cpp
+	MailListView.cpp
 	)
 set(headers 
 	gui.h 

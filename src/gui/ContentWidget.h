@@ -9,5 +9,7 @@ class ContentWidget : public QWidget
 public:
 	ContentWidget(QWidget* parent = 0);
 	virtual ~ContentWidget();
+private:
+	void initialize();
 };
 #endif//__CONTENTWIDGET__H
