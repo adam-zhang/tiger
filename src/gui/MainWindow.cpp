@@ -1,15 +1,15 @@
 #include "MainWindow.h"
-#include "MainWidget.h"
 #include "AboutDialog.h"
 #include "Macros.h"
 #include <QMenuBar>
 #include <QMenu>
+#include <QSplitter>
+#include <QTreeView>
 
 MainWindow::MainWindow(QWidget* parent)
 	: QMainWindow(parent)
 {
 	setGeometry(100, 100, 800, 600);
-	setCentralWidget(new MainWidget);
 	initialize();
 }
 
@@ -19,9 +19,27 @@ MainWindow::~MainWindow()
 
 void MainWindow::initialize()
 {
+	createCentralWidget();
 	createMenus();
 	createToolbar();
 	createStatusbar();
+}
+
+void MainWindow::createCentralWidget()
+{
+	setCentralWidget(new QSplitter(this));
+	QSplitter* splitter = static_cast<QSplitter*>(centralWidget());
+	splitter->addWidget(new QTreeView);
+	splitter->addWidget(createRightView());
+}
+
+QWidget* MainWindow::createRightView()
+{
+	QSplitter* splitter = new QSplitter;
+	splitter->setOrientation(Qt::Vertical);
+	splitter->addWidget(new QTreeView);
+	splitter->addWidget(new QTreeView);
+	return splitter;
 }
 
 void MainWindow::createStatusbar()

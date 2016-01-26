@@ -6,6 +6,8 @@
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT
+
+
 public:
 	MainWindow(QWidget* parent = 0);
 	~MainWindow();
@@ -18,6 +20,8 @@ private:
 	void createHelpMenu();
 	void createExitAction(QMenu*);
 	void addAboutAction(QMenu*);
+	void createCentralWidget();
+	QWidget* createRightView();
 
 private slots:
 	void onExit();
