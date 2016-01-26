@@ -4,11 +4,15 @@ set(moc_headers
 	MainWindow.h
 	MainWidget.h
 	AboutDialog.h
+	AccountTreeView.h
+	ContentWidget.h
 	)
 set(sources gui.cpp
 	MainWindow.cpp
 	MainWidget.cpp
 	AboutDialog.cpp
+	AccountTreeView.cpp
+	ContentWidget.cpp
 	)
 set(headers 
 	gui.h 

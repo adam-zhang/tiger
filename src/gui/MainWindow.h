@@ -18,6 +18,7 @@ private:
 	void createHelpMenu();
 	void createExitAction(QMenu*);
 	void addAboutAction(QMenu*);
+
 private slots:
 	void onExit();
 	void onAbout();

@@ -9,6 +9,8 @@ class MainWidget : public QWidget
 public:
 	MainWidget(QWidget* parent = 0);
 	virtual ~MainWidget();
+private:
+	void initialize();
 };
 		   
 #endif//__MAINWIDGET__H
