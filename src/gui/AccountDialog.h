@@ -9,5 +9,9 @@ class AccountDialog : public QDialog
 public:
 	AccountDialog(QWidget* parent = 0);
 	virtual ~AccountDialog();
+private:
+	void initialize();
+	QLayout* mainPart();
+	QLayout* buttonPart();
 };
 #endif//__ACCOUNTDIALOG__H

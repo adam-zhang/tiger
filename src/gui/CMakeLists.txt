@@ -7,6 +7,8 @@ set(moc_headers
 	ContentWidget.h
 	MailListView.h
 	AccountDialog.h
+	AccountListWidget.h
+	AccountDetailWidget.h
 	)
 set(sources gui.cpp
 	MainWindow.cpp
@@ -15,6 +17,8 @@ set(sources gui.cpp
 	ContentWidget.cpp
 	MailListView.cpp
 	AccountDialog.cpp
+	AccountListWidget.cpp
+	AccountDetailWidget.cpp
 	)
 set(headers 
 	gui.h 
