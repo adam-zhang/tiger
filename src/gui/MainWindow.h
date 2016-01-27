@@ -21,10 +21,13 @@ private:
 	void createExitAction(QMenu*);
 	void addAboutAction(QMenu*);
 	void createCentralWidget();
+	void createEditMenu();
+	void addAccountAction(QMenu* menu);
 	QWidget* createRightView();
 
 private slots:
 	void onExit();
 	void onAbout();
+	void onAccount();
 };
 #endif//__MAINWINDOW__H

@@ -1,6 +1,8 @@
 #include "MainWindow.h"
 #include "AboutDialog.h"
+#include "AccountDialog.h"
 #include "Macros.h"
+#include "AccountTreeView.h"
 #include <QMenuBar>
 #include <QMenu>
 #include <QSplitter>
@@ -29,7 +31,7 @@ void MainWindow::createCentralWidget()
 {
 	setCentralWidget(new QSplitter(this));
 	QSplitter* splitter = static_cast<QSplitter*>(centralWidget());
-	splitter->addWidget(new QTreeView);
+	splitter->addWidget(new AccountTreeView);
 	splitter->addWidget(createRightView());
 }
 
@@ -53,7 +55,25 @@ void MainWindow::createToolbar()
 void MainWindow::createMenus()
 {
 	createFileMenu();
+	createEditMenu();
 	createHelpMenu();
+}
+
+void MainWindow::createEditMenu()
+{
+	QMenu* menu = menuBar()->addMenu(tr("&Edit"));
+	addAccountAction(menu);
+}
+
+void MainWindow::addAccountAction(QMenu* menu)
+{
+	QAction* account = menu->addAction(tr("Account Settings..."));
+	connect(account, SIGNAL(triggered()), this, SLOT(onAccount()));
+}
+
+void MainWindow::onAccount()
+{
+	SHOW_DIALOG(AccountDialog);
 }
 
 void MainWindow::createHelpMenu()
