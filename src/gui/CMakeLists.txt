@@ -29,5 +29,6 @@ add_library(gui SHARED ${headers}
 	${sources}
 	${mocs}
 	)
-target_link_libraries(gui ${QT_LIBRARIES})
+target_link_libraries(gui ${QT_LIBRARIES}
+	data)
 target_include_directories(gui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

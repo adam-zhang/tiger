@@ -34,9 +34,20 @@ QLayout* AccountDialog::buttonPart()
 {
 	QHBoxLayout* layout = new QHBoxLayout;
 	QDialogButtonBox* box = new QDialogButtonBox;
-	box->setStandardButtons(QDialogButtonBox::Ok);
-	//box->setStandardButton(QDialogButtonBox::Cancel);
+	box->addButton(QDialogButtonBox::Ok);
+	box->addButton(QDialogButtonBox::Cancel);
 	layout->addWidget(box);
 	connect(box, SIGNAL(accepted()), this, SLOT(onAccepted()));
+	connect(box, SIGNAL(rejected()), this, SLOT(onRejected()));
 	return layout;
+}
+
+void AccountDialog::onAccepted()
+{
+	close();
+}
+
+void AccountDialog::onRejected()
+{
+	close();
 }

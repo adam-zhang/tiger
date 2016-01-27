@@ -13,5 +13,8 @@ private:
 	void initialize();
 	QLayout* mainPart();
 	QLayout* buttonPart();
+private slots:
+	void onAccepted();
+	void onRejected();
 };
 #endif//__ACCOUNTDIALOG__H
