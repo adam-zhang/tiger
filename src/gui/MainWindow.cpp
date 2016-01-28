@@ -27,6 +27,7 @@ void MainWindow::initialize()
 	createStatusbar();
 }
 
+
 void MainWindow::createCentralWidget()
 {
 	setCentralWidget(new QSplitter(this));
@@ -46,6 +47,7 @@ QWidget* MainWindow::createRightView()
 
 void MainWindow::createStatusbar()
 {
+	statusBar();
 }
 
 void MainWindow::createToolbar()
