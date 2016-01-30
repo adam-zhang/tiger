@@ -9,5 +9,12 @@ class AccountDetailWidget : public QWidget
 public:
 	AccountDetailWidget(QWidget* parent = 0);
 	virtual ~AccountDetailWidget();
+private:
+	void initialize();
+	QLayout* createAccountName();
+	QLayout* createPassword();
+	QLayout* createSendingServer();
+	QLayout* createReceivingServer();
+	QWidget* createServerType();
 };
 #endif//__ACCOUNTDETAILWIDGET__H

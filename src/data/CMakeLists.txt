@@ -1,6 +1,6 @@
 find_package(Qt4 REQUIRED)
 include(${QT_USE_FILE})
-#set(QT_DONT_USE_QTGUI true)
+set(QT_DONT_USE_QTGUI true)
 set(sources 
 	BaseData.cpp
 	)
