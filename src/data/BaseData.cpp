@@ -7,5 +7,4 @@ BaseData::BaseData(QObject* parent)
 BaseData::~BaseData()
 {
 
-
 }

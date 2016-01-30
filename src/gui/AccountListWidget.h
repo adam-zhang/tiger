@@ -9,5 +9,7 @@ class AccountListWidget : public QWidget
 public:
 	AccountListWidget(QWidget* parent = 0);
 	virtual ~AccountListWidget();
+private:
+	void initialize();
 };
 #endif//__ACCOUNTLISTWIDGET__H
