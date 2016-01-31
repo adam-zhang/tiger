@@ -5,6 +5,7 @@
 AccountListWidget::AccountListWidget(QWidget* parent)
 	: QWidget(parent)
 {
+	initialize();
 }
 
 AccountListWidget::~AccountListWidget()
