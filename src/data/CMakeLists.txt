@@ -3,9 +3,13 @@ include(${QT_USE_FILE})
 set(QT_DONT_USE_QTGUI true)
 set(sources 
 	BaseData.cpp
+	Account.cpp
+	MailFolder.cpp
 	)
 set(headers
 	BaseData.h
+	Account.h
+	MailFolder.h
 	)
 add_library(data SHARED ${sources} ${headers})
 #target_link_libraries(${QT_LIBRARIES})
