@@ -1,0 +1,6 @@
+this articl will describe the mistakes I will make in project
+
+1. I forgot add the target name in CMakeFiles in data, so that I did compile
+it until I found it.
+2. I just don't understand that sometimes I just use Qt4 headers without
+spcifying the path, sometimes it must.
